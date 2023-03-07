@@ -9,8 +9,8 @@ use csvable::ToCsv;
 use csv_loader::CsvLoader;
 
 fn main() {
-	let mut user_handler: CsvLoader<User> = CsvLoader::new("./users.csv");
-	let mut flight_handler: CsvLoader<Flight> = CsvLoader::new("./flights.csv");
+	let user_handler: CsvLoader<User> = CsvLoader::new("./users.csv");
+	let flight_handler: CsvLoader<Flight> = CsvLoader::new("./flights.csv");
 
 	let mut user_database = HashMap::<String, User>::new();
 	let mut flight_database = HashMap::<String, Flight>::new();

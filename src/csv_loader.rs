@@ -21,7 +21,7 @@ where
         }
     }
     
-    pub fn load(&mut self) -> HashMap<String, V> {
+    pub fn load(&self) -> HashMap<String, V> {
         let file = File::open(&self.path).expect("can't open file");
         let reader = BufReader::new(file);
         let mut temp_objects = HashMap::new();
